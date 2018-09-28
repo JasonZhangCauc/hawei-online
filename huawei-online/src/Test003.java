@@ -13,6 +13,7 @@ import java.util.Scanner;
 	
 	n               输入随机数的个数
 	inputArray      n个随机整数组成的数组
+	
 	Return Value
 	OutputArray    输出处理后的随机整数
 

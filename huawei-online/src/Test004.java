@@ -22,28 +22,29 @@ import java.util.Scanner;
  *
  */
 public class Test004 {
-	
+
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		String str1=scanner.nextLine();
-		String str2=scanner.nextLine();
-		int length1=str1.length();
+		String str1 = scanner.nextLine();
+		String str2 = scanner.nextLine();
+		int length1 = str1.length();
 		int length2 = str2.length();
 		eightStr(str1, length1);
 		eightStr(str2, length2);
 	}
-	//输出函数
-	public static void eightStr(String str ,int length ) {
-		int eight=length/8;	//不需要补0的字符串个数
-		String tmp;		//中间变量
-		for(int i=0;i<eight;i++) {//将不需要补0的字符串输出
+
+	// 输出函数
+	public static void eightStr(String str, int length) {
+		int eight = length / 8; // 不需要补0的字符串个数
+		String tmp; // 中间变量
+		for (int i = 0; i < eight; i++) {// 将不需要补0的字符串输出
 			tmp = str.substring(0, 8);
 			System.out.println(tmp);
-			str = str.substring(8,str.length());
+			str = str.substring(8, str.length());
 		}
-		if(length%8!=0) {//有多余字符串的补0输出
-			for(int j=8-str.length();j>0;j--) {
-				str=str+"0";
+		if (length % 8 != 0) {// 有多余字符串的补0输出
+			for (int j = 8 - str.length(); j > 0; j--) {
+				str = str + "0";
 			}
 			System.out.println(str);
 		}

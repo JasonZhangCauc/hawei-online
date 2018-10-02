@@ -1,2 +1,2 @@
-ÌâÄ¿Ä¿Â¼£º
+Github
 https://github.com/JasonZhangCauc/hawei-online

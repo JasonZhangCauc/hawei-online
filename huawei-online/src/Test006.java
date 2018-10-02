@@ -2,29 +2,29 @@ import java.util.Scanner;
 
 /**
  * 
- * ¹¦ÄÜ:ÊäÈëÒ»¸öÕýÕûÊý£¬°´ÕÕ´ÓÐ¡µ½´óµÄË³ÐòÊä³öËüµÄËùÓÐÖÊÊýµÄÒò×Ó£¨Èç180µÄÖÊÊýÒò×ÓÎª2 2 3 3 5 £©
- * ×îºóÒ»¸öÊýºóÃæÒ²ÒªÓÐ¿Õ¸ñ
-	ÏêÏ¸ÃèÊö£º
-	º¯Êý½Ó¿ÚËµÃ÷£º
+ * åŠŸèƒ½:è¾“å…¥ä¸€ä¸ªæ­£æ•´æ•°ï¼ŒæŒ‰ç…§ä»Žå°åˆ°å¤§çš„é¡ºåºè¾“å‡ºå®ƒçš„æ‰€æœ‰è´¨æ•°çš„å› å­ï¼ˆå¦‚180çš„è´¨æ•°å› å­ä¸º2 2 3 3 5 ï¼‰
+ * æœ€åŽä¸€ä¸ªæ•°åŽé¢ä¹Ÿè¦æœ‰ç©ºæ ¼
+	è¯¦ç»†æè¿°ï¼š
+	å‡½æ•°æŽ¥å£è¯´æ˜Žï¼š
 	public String getResult(long ulDataInput)
 
-	ÊäÈë²ÎÊý£º
-	long ulDataInput£ºÊäÈëµÄÕýÕûÊý
+	è¾“å…¥å‚æ•°ï¼š
+	long ulDataInputï¼šè¾“å…¥çš„æ­£æ•´æ•°
 
-	·µ»ØÖµ£º
+	è¿”å›žå€¼ï¼š
 	String
 
- * ÊäÈëÃèÊö:
-	ÊäÈëÒ»¸ölongÐÍÕûÊý
+ * è¾“å…¥æè¿°:
+	è¾“å…¥ä¸€ä¸ªlongåž‹æ•´æ•°
 
- * Êä³öÃèÊö:
-	°´ÕÕ´ÓÐ¡µ½´óµÄË³ÐòÊä³öËüµÄËùÓÐÖÊÊýµÄÒò×Ó£¬ÒÔ¿Õ¸ñ¸ô¿ª¡£×îºóÒ»¸öÊýºóÃæÒ²ÒªÓÐ¿Õ¸ñ¡£
+ * è¾“å‡ºæè¿°:
+	æŒ‰ç…§ä»Žå°åˆ°å¤§çš„é¡ºåºè¾“å‡ºå®ƒçš„æ‰€æœ‰è´¨æ•°çš„å› å­ï¼Œä»¥ç©ºæ ¼éš”å¼€ã€‚æœ€åŽä¸€ä¸ªæ•°åŽé¢ä¹Ÿè¦æœ‰ç©ºæ ¼ã€‚
 
- * Ê¾Àý1
-	ÊäÈë
+ * ç¤ºä¾‹1
+	è¾“å…¥
 	180
 
-	Êä³ö
+	è¾“å‡º
 	2 2 3 3 5
  *
  */
@@ -39,9 +39,9 @@ public class Test006 {
 		StringBuilder builder = new StringBuilder(128);
         long i = 2;
         while (i <= ulDataInput) {
-            // Ã¿´ÎµÄiÒ»¶¨ÊÇÖÊÊýÊ±²Å»áÂú×ã
-            // ÒòÎªÈç¹ûÊÇÒ»¸öºÏÊý£¬ÄÇÄÇËüÒ»¶¨ÊÇÓÉ¸üÐ¡µÄÖÊÊýÏà³ËµÃÀ´µÄ£¬
-            // ¶øÔÚiÇ°µÄÖÊÊýÒÑ¾­È«²¿±»Ê¹ÓÃ¹ýÁË£¬²»ÄÜÔÙÕû³ýnumÁË
+            // æ¯æ¬¡çš„iä¸€å®šæ˜¯è´¨æ•°æ—¶æ‰ä¼šæ»¡è¶³
+            // å› ä¸ºå¦‚æžœæ˜¯ä¸€ä¸ªåˆæ•°ï¼Œé‚£é‚£å®ƒä¸€å®šæ˜¯ç”±æ›´å°çš„è´¨æ•°ç›¸ä¹˜å¾—æ¥çš„ï¼Œ
+            // è€Œåœ¨iå‰çš„è´¨æ•°å·²ç»å…¨éƒ¨è¢«ä½¿ç”¨è¿‡äº†ï¼Œä¸èƒ½å†æ•´é™¤numäº†
             while (ulDataInput % i == 0) {
                 builder.append(i).append(' ');
                 ulDataInput /= i;

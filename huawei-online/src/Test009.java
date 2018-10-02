@@ -2,19 +2,19 @@ import java.util.Scanner;
 
 /**
  * 
- * ÌâÄ¿ÃèÊö
-	ÊäÈëÒ»¸öintĞÍÕûÊı£¬°´ÕÕ´ÓÓÒÏò×óµÄÔÄ¶ÁË³Ğò£¬·µ»ØÒ»¸ö²»º¬ÖØ¸´Êı×ÖµÄĞÂµÄÕûÊı¡£
+ * é¢˜ç›®æè¿°
+	è¾“å…¥ä¸€ä¸ªintå‹æ•´æ•°ï¼ŒæŒ‰ç…§ä»å³å‘å·¦çš„é˜…è¯»é¡ºåºï¼Œè¿”å›ä¸€ä¸ªä¸å«é‡å¤æ•°å­—çš„æ–°çš„æ•´æ•°ã€‚
 
- * ÊäÈëÃèÊö:
-	ÊäÈëÒ»¸öintĞÍÕûÊı
+ * è¾“å…¥æè¿°:
+	è¾“å…¥ä¸€ä¸ªintå‹æ•´æ•°
 	
- * Êä³öÃèÊö:
-	°´ÕÕ´ÓÓÒÏò×óµÄÔÄ¶ÁË³Ğò£¬·µ»ØÒ»¸ö²»º¬ÖØ¸´Êı×ÖµÄĞÂµÄÕûÊı
+ * è¾“å‡ºæè¿°:
+	æŒ‰ç…§ä»å³å‘å·¦çš„é˜…è¯»é¡ºåºï¼Œè¿”å›ä¸€ä¸ªä¸å«é‡å¤æ•°å­—çš„æ–°çš„æ•´æ•°
 
- * Ê¾Àı1
-	ÊäÈë
+ * ç¤ºä¾‹1
+	è¾“å…¥
 	9876673
-	Êä³ö
+	è¾“å‡º
 	37689
  *
  */
@@ -23,26 +23,63 @@ public class Test009 {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		int start = scanner.nextInt();
-		int[] arrays = new int[50];// ¶¨Òå´æ´¢½á¹ûµÄÊı×é
-		int tmp; // ÖĞ¼ä±äÁ¿
-		int num = 0; // ¼ÇÂ¼ÕûĞÎÊı×ÖÎ»Êı
+		int[] arrays = new int[50];// å®šä¹‰å­˜å‚¨ç»“æœçš„æ•°ç»„
+		int tmp; // ä¸­é—´å˜é‡
+		int num = 0; // è®°å½•æ•´å½¢æ•°å­—ä½æ•°
 		for (int i = 0; start > 0; i++) {
-			tmp = start % 10; // È¡Ä©Î»Êı×Ö
-			start /= 10; // È¥µôÄ©Î»Êı×Ö
-			boolean bool = true; // ±ê¼ÇÊÇ·ñÓĞÖØ¸´£¬true´ú±íÎŞÖØ¸´
+			tmp = start % 10; // å–æœ«ä½æ•°å­—
+			start /= 10; // å»æ‰æœ«ä½æ•°å­—
+			boolean bool = true; // æ ‡è®°æ˜¯å¦æœ‰é‡å¤ï¼Œtrueä»£è¡¨æ— é‡å¤
 			for (int j = 0; j <= i; j++) {
 				if (arrays[j] == tmp) {
 					bool = false;
 				}
 			}
-			if (bool) { // ÎŞÖØ¸´Ôò¼ÇÂ¼
+			if (bool) { // æ— é‡å¤åˆ™è®°å½•
 				arrays[num] = tmp;
 				num++;
 			}
 		}
-		for (int k = 0; k < num; k++) { // Êä³ö
+		for (int k = 0; k < num; k++) { // è¾“å‡º
 			System.out.print(arrays[k]);
 		}
 	}
 
 }
+
+
+//å…¶ä»–æ–¹æ³•
+/**
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        while (scanner.hasNext()) {
+            int input = scanner.nextInt();
+            System.out.println(extractNumber(input + ""));
+        }
+
+        scanner.close();
+    }
+
+    private static String extractNumber(String numStr) {
+        StringBuilder builder = new StringBuilder();
+
+        HashSet<Character> set = new LinkedHashSet<>();//Characteræ˜¯charçš„åŒ…è£…ç±»å‹
+        for (int i = numStr.length() - 1; i >= 0; i--) {
+            set.add(numStr.charAt(i));
+        }
+
+        for (Character c : set) {
+            builder.append(c);
+        }
+
+        // å¦‚æœç¬¬ä¸€ä¸ªå­—ç¬¦æ˜¯0
+        if (builder.charAt(0) == '0') {
+            return builder.substring(1, builder.length());
+        }
+
+        return builder.toString();
+    }
+}
+*/
